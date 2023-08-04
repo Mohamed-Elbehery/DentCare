@@ -1,0 +1,143 @@
+:root {
+  --container-width: 95%;
+  --primary-color: rgb(48, 159, 233);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.top-header {
+  background-color: #ececec;
+}
+
+.top-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.top-header .container p {
+  color: gray;
+  font-size: 14px;
+}
+
+.top-header .info {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.top-header .info p {
+  color: white;
+  padding: 0.65rem 0.65rem 0.65rem 2.25rem;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.top-header .info p.email::before {
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  transform: skew(50deg);
+  background-color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+header h1 a {
+  color: var(--primary-color);
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.landing {
+  background-image: url('./assets/carousel-1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.landing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 13, 59, 0.8);
+}
+
+.landing .landing-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 999;
+}
+
+.landing .landing-content h1 {
+  font-size: 40px;
+  width: 600px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.landing .landing-content h5 {
+  line-height: 1.4;
+}
+
+.landing .landing-content div button {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.landing .landing-content div button:nth-child(2) {
+  background-color: tomato;
+}
+
+.landing .landing-content div button:hover {
+  background-color: rgb(33, 131, 197);
+}
+
+.landing .landing-content div button:nth-child(2):hover {
+  background-color: rgb(209, 62, 36);
+}
