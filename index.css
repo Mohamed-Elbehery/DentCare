@@ -1,0 +1,447 @@
+/*! Variables */
+:root {
+  --container-width: 95%;
+  --primary-color: rgb(48, 159, 233);
+  --primary-color-alpha: rgba(48, 159, 233, 0.7);
+  --primary-color-hover: rgb(33, 131, 197);
+  --dark-primary: rgb(6, 6, 37);
+  --dark-alpha: rgba(13, 13, 59, 0.8);
+  --tomato: tomato;
+  --tomato-hover: rgb(209, 62, 36);
+}
+
+/*! Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+button {
+  all: unset;
+}
+
+/*! Top Header */
+.top-header {
+  background-color: #ececec;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 38px;
+  z-index: 777;
+}
+
+.top-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.top-header .container p {
+  color: gray;
+  font-size: 14px;
+}
+
+.top-header .info {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.top-header .info p {
+  color: white;
+  padding: 0.65rem 2.25rem 0.65rem 0.65rem;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.top-header .info p.email {
+  padding: 0.65rem 0.65rem 0.65rem 2.25rem;
+}
+
+.top-header .info p.email::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  transform: skew(50deg);
+  background-color: var(--primary-color);
+}
+
+/*! Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 38px;
+  background-color: white;
+  z-index: 999;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+header .container h1 a {
+  color: var(--primary-color);
+}
+
+header .container nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .container nav ul li a {
+  transition: 0.35s;
+}
+
+header .container nav ul li a.appointment-btn {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+header .container nav ul li a.appointment-btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+header .container nav ul li a:hover:not(.appointment-btn) {
+  color: var(--primary-color);
+}
+
+/*! Landing Section */
+.landing {
+  background-image: url("./assets/carousel-1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--dark-alpha);
+}
+
+.landing .landing-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 111;
+}
+
+.landing .landing-content h1 {
+  font-size: 40px;
+  width: 600px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.landing .landing-content h5 {
+  line-height: 1.4;
+}
+
+.landing .landing-content div button {
+  color: white;
+  padding: 1rem 2.25rem;
+  background-color: var(--primary-color);
+
+  cursor: pointer;
+  transition: 0.35s;
+  font-size: 16px;
+}
+
+.landing .landing-content div button:nth-child(2) {
+  background-color: tomato;
+}
+
+.landing .landing-content div button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.landing .landing-content div button:nth-child(2):hover {
+  background-color: var(--tomato-hover);
+}
+
+/*! About Section */
+#about {
+  min-height: 100vh;
+  width: 90%;
+  padding: 15rem 0 17.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+#about .about-content h1 {
+  font-size: 40px;
+  max-width: 750px;
+  line-height: 1.4;
+}
+
+#about .about-content p,
+#about .about-content h3 {
+  color: gray;
+}
+
+#about .about-content h3 {
+  font-style: italic;
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+#about .about-content p {
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+#about .about-content .appointment-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+#about .about-content .appointment-btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+#about .about-img {
+  position: relative;
+}
+
+#about .about-img img {
+  width: 600px;
+  user-select: none;
+}
+
+#about .make-appointment-tomato {
+  position: absolute;
+  background-color: var(--tomato);
+  top: -310px;
+  right: 0;
+  color: white;
+  padding: 1rem 2rem 3.5rem;
+  z-index: 333;
+}
+
+#about .make-appointment-tomato h4 {
+  margin: 1rem 0;
+  font-size: 18px;
+}
+
+#about .make-appointment-tomato p {
+  margin-bottom: 1rem;
+  width: 350px;
+  line-height: 1.4;
+}
+
+#about .make-appointment-primary {
+  position: absolute;
+  background-color: var(--primary-color);
+  bottom: -200px;
+  right: 0;
+  text-align: center;
+  z-index: 333;
+}
+
+#about .make-appointment-primary h4 {
+  color: white;
+  margin: 1rem 0;
+}
+
+#about .make-appointment-primary p {
+  color: white;
+  line-height: 1.6;
+  width: 600px;
+  margin-bottom: 1rem;
+}
+
+#about .make-appointment-primary h2,
+#about .make-appointment-tomato h2 {
+  color: white;
+}
+
+/*! Services Section */
+#services {
+  height: 100vh;
+  background-image: url("./assets/carousel-1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#services .services-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color-alpha);
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+}
+
+#services .services-content h1 {
+  font-size: 30px;
+  width: 500px;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+#services .services-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  width: 700px;
+}
+
+#services .services-content div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#services .services-content div button {
+  background-color: var(--dark-primary);
+  padding: 1rem 2.25rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#services .services-content div button:nth-child(2) {
+  color: black;
+  background-color: white;
+}
+
+/*! Testimonials Section */
+#testimonials {
+  margin-top: 2rem;
+  height: 600px;
+  background-image: url("./assets/carousel-2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#testimonials .testimonials-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color-alpha);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+#testimonials .testimonials-content p {
+  width: 650px;
+  line-height: 1.7;
+  margin: 1rem 0;
+  position: relative;
+}
+
+#testimonials .testimonials-content p::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#testimonials .testimonials-content h4 {
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--dark-primary);
+}
+
+/* Current Page */
+.current-page {
+  margin-top: 114px;
+  background-image: url("./assets/carousel-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  position: relative;
+}
+
+.current-page-content {
+  background-color: var(--dark-alpha);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.current-page-content h1 {
+  font-size: 30px;
+}
+
+.current-page-content h4 {
+  font-weight: normal;
+  font-size: 14px;
+}

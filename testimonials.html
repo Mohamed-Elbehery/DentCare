@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./global.css">
-  <title>Testimonials</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Testimonials</title>
+  </head>
+  <body>
     <!-- Top Header -->
     <div class="top-header">
       <div class="container">
-        <p>Opening Hours: Mon  - Tues: 6.00am - 10.00pm, Sunday Closed</p>
+        <p>Opening Hours: Mon - Tues: 6.00am - 10.00pm, Sunday Closed</p>
         <div class="info">
           <p class="email">info@example.com</p>
           <p>+0123456789</p>
@@ -19,18 +19,48 @@
     </div>
     <!-- Header -->
     <header>
-      <h1>
-        <a href="#">DentCare</a>
-      </h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="testimonials.html">Testimonials</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a class="appointment" href="#">Appointment</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <h1>
+          <a href="#">DentCare</a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="testimonials.html">Testimonials</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="appointment-btn" href="#appointment">Appointment</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-</body>
+    <!-- Current Page -->
+    <section class="current-page">
+      <div class="current-page-content">
+        <h1>Testimonials</h1>
+        <h4>Home <span>O</span> Testimonials</h4>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="testimonials-content">
+        <div>
+          <img
+            width="75"
+            height="75"
+            src="./assets/testimonial-1.jpg"
+            alt="client-img"
+          />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, minima
+          nesciunt quasi reiciendis, modi laudantium voluptatem praesentium illo
+          nihil fugit ullam minus, unde hic natus! Similique, adipisci odio.
+        </p>
+        <h4>Client Name</h4>
+      </div>
+    </section>
+  </body>
 </html>
